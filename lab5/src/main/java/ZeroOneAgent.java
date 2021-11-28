@@ -6,7 +6,7 @@ public class ZeroOneAgent extends Agent {
     @Override
     protected void setup() {
         super.setup();
-        addBehaviour(new SendBehaviour(this, "Content of a sent message"));
+        addBehaviour(new SendBehaviour(this, "delete"));
     }
 
 

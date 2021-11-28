@@ -18,10 +18,10 @@ public class SendBehaviour extends OneShotBehaviour {
 
     @Override
     public void action() {
-        int msgType = pickANumber() == 1 ? ACLMessage.CFP : ACLMessage.INFORM;
+        int msgType = pickANumber() == 1 ? ACLMessage.CFP : ACLMessage.REQUEST;
         ACLMessage msg = new ACLMessage(msgType);
         msg.setContent(msgContent);
-        msg.addReceiver(new AID("AgentReceive", AID.ISLOCALNAME));
+        msg.addReceiver(new AID("BOT", AID.ISLOCALNAME));
         myAgent.send(msg);
         myAgent.addBehaviour(new WaitBehaviour());
     }
